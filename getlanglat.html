@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crop prediction form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<style>
+
+    body{
+
+        background-image:url('static/farmer.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+    }
+</style>
+<body>
+
+<div class="section bg-primary text-white text-center" style="padding:20px;">
+    <h1>Geo Location Crop recomendation system</h1>
+</div>
+
+<div class="container bg-info text-danger">
+<form name="f1" action="/" method="post">
+
+
+    <table class="table table-bordered">
+
+
+
+
+      
+
+        <tr>
+            <td>
+                Latitude
+            </td>
+            <td>
+
+                {% if lt %}
+                <input type="text" name="lat" placeholder="Latittude" required value={{lt}} />
+                {% else %}
+                <input type="text" name="lat" placeholder="Latittude" required  />
+                {% endif %}
+                
+            </td>
+        </tr>
+
+
+
+        <tr>
+            <td>
+                Longitude
+            </td>
+            <td>
+
+                {% if lg %}
+                <input type="text" name="lang" placeholder="Longitude" required="required" value="{{ lg }}" /> 
+                {% else %}
+                <input type="text" name="lang" placeholder="Longitude" required />
+                {% endif %}
+               
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" align="center">
+                <input type="submit" value="Recommend" class="btn btn-block btn-primary" />
+            </td>
+        </tr>
+    </table>
+</form>
+<br><br>
+<a href="/crop" class="btn btn-danger btn-lg btn-block">For Manual input of Data click here</a>
+</div>
+</body>
+</html>

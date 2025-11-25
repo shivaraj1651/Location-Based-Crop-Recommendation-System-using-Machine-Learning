@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .header{
+            background-color:green;
+            color:white;
+            height:100px;
+            line-height: normal;
+            font-size:33px;
+       }
+       body{
+        background-color: lightgreen;
+       }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="header">
+
+        <h1>
+            <marquee behavior="" direction="">
+                Location based Crop Recomendataion System using manual System
+            </marquee>
+        </h1>
+    </div>
+
+    <center>
+    <h1 style="text-transform: capitalize;">{{res}}</h1>
+    </center>
+
+    <form action="/crop" method="post">
+
+        <table align="center">
+
+
+            <tr>
+                <td>Nitrogen</td>
+                <td>
+                    <input type="text" name="nitrogen" required >
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>Phosporus</td>
+                <td>
+                    <input type="text" name="phosporus" required >
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>Pottasium</td>
+                <td>
+                    <input type="text" name="Pottasium" required >
+                </td>
+            </tr>
+            
+
+
+            <tr>
+                <td>Temparature</td>
+                <td>
+                    <input type="text" name="Temparature" required >
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>Humidity</td>
+                <td>
+                    <input type="text" name="Humidity" required >
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ph</td>
+                <td>
+                    <input type="text" name="ph" required >
+                </td>
+            </tr>
+            <tr>
+                <td>Rainfall</td>
+                <td>
+                    <input type="text" name="rainfall" required >
+                </td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <input type="reset">
+                </td>
+                <td>
+                    <input type="submit"  >
+                </td>
+            </tr>
+
+
+
+
+
+        </table>
+    </form>
+
+
+</body>
+</html>
